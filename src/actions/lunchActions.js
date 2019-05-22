@@ -8,3 +8,9 @@ export const REMOVE_DRINK = 'REMOVE_DRINK';
 export const removeDrink = () => ({
   type: REMOVE_DRINK
 });
+
+export const ADD_SANDWICH = 'ADD_SANDWICH';
+export const addSandwich = sandwich => ({
+  type: ADD_SANDWICH,
+  payload: sandwich
+});
