@@ -19,3 +19,9 @@ export const REMOVE_SANDWICH = 'REMOVE_SANDWICH';
 export const removeSandwich = () => ({
   type: REMOVE_SANDWICH
 });
+
+export const ADD_CHIPS = 'ADD_CHIPS';
+export const addChips = chips => ({
+  type: ADD_CHIPS,
+  payload: chips
+});
