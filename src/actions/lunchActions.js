@@ -14,3 +14,8 @@ export const addSandwich = sandwich => ({
   type: ADD_SANDWICH,
   payload: sandwich
 });
+
+export const REMOVE_SANDWICH = 'REMOVE_SANDWICH';
+export const removeSandwich = () => ({
+  type: REMOVE_SANDWICH
+});
