@@ -25,3 +25,8 @@ export const addChips = chips => ({
   type: ADD_CHIPS,
   payload: chips
 });
+
+export const REMOVE_CHIPS = 'REMOVE_CHIPS';
+export const removeChips = () => ({
+  type: REMOVE_CHIPS
+});
