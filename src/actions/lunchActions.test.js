@@ -27,4 +27,10 @@ describe('lunch actions', () => {
       type: REMOVE_DRINK
     });
   });
+
+  it('removes a sandwich', () => {
+    expect(removeSandwich()).toEqual({
+      type: REMOVE_SANDWICH
+    });
+  });
 });
