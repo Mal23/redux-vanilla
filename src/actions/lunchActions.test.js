@@ -33,4 +33,10 @@ describe('lunch actions', () => {
       type: REMOVE_SANDWICH
     });
   });
+
+  it('removes chips', () => {
+    expect(removeChips()).toEqual({
+      type: REMOVE_CHIPS
+    });
+  });
 });
