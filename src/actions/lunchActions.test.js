@@ -21,4 +21,10 @@ describe('lunch actions', () => {
       payload: 'popchips'
     });
   });
+
+  it('removes a drink', () => {
+    expect(removeDrink()).toEqual({
+      type: REMOVE_DRINK
+    });
+  });
 });
