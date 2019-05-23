@@ -1,5 +1,5 @@
 import reducer from './lunchReducer';
-import { addDrink, removeDrink } from '../actions/lunchActions';
+import { addDrink, removeDrink, addSandwich } from '../actions/lunchActions';
 
 describe('lunch reducer', () => {
   it('handles the ADD_DRINK action', () => {
@@ -23,6 +23,18 @@ describe('lunch reducer', () => {
 
     expect(updatedState).toEqual({
       drink: null
+    });
+  });
+
+  it('handles the ADD_SANDWICH action', () => {
+    const initialState = {
+      sandwich: null
+    };
+
+    const updatedState = reducer(initialState, addSandwich('vegan'));
+
+    expect(updatedState).toEqual({
+      sandwich: 'vegan'
     });
   });
 });
