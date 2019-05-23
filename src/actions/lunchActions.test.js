@@ -14,4 +14,11 @@ describe('lunch actions', () => {
       payload: 'vegan'
     });
   });
+
+  it('adds chips', () => {
+    expect(addChips('popchips')).toEqual({
+      type: ADD_CHIPS,
+      payload: 'popchips'
+    });
+  });
 });

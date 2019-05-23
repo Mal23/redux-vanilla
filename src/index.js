@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import { ADD_DRINK, ADD_SANDWICH } from './actions/lunchActions';
+import { ADD_DRINK, ADD_SANDWICH, ADD_CHIPS } from './actions/lunchActions';
 
 const initialState = {
   drink: null,
@@ -13,7 +13,7 @@ function reducer(state = initialState, action) {
       return { ...state, drink: action.payload };
     case ADD_SANDWICH:
       return { ...state, sandwich: action.payload };
-    case 'ADD_CHIPS':
+    case ADD_CHIPS:
       return { ...state, chips: action.payload };
     case 'REMOVE_DRINK':
       return { ...state, drink: null };
