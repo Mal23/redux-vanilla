@@ -1,5 +1,5 @@
 import reducer from './lunchReducer';
-import { addDrink, removeDrink, addSandwich, removeSandwich, addChips } from '../actions/lunchActions';
+import { addDrink, removeDrink, addSandwich, removeSandwich, addChips, removeChips } from '../actions/lunchActions';
 
 describe('lunch reducer', () => {
   it('handles the ADD_DRINK action', () => {
@@ -59,6 +59,18 @@ describe('lunch reducer', () => {
 
     expect(updatedState).toEqual({
       chips: 'popchips'
+    });
+  });
+
+  it('handles the REMOVE_CHIPS action', () => {
+    const initialState = {
+      chips: 'popchips'
+    };
+
+    const updatedState = reducer(initialState, removeChips());
+    
+    expect(updatedState).toEqual({
+      chips: null
     });
   });
 });
