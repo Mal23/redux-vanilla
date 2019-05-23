@@ -7,4 +7,11 @@ describe('lunch actions', () => {
       payload: 'Old Fashioned'
     });
   });
+
+  it('adds a sandwich', () => {
+    expect(addSandwich('vegan')).toEqual({
+      type: ADD_SANDWICH,
+      payload: 'vegan'
+    });
+  });
 });
