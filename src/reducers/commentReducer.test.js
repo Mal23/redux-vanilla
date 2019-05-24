@@ -9,4 +9,15 @@ describe('comment reducer', () => {
       1: ['Bueno']
     });
   });
+
+  it('handles the CREATE_COMMENT action with existing comments', () => {
+    const initialState = {
+      1: ['hola']
+    };
+    const newState = reducer(initialState, createComment(1, 'Bueno'));
+
+    expect(newState).toEqual({
+      1: ['hola', 'Bueno']
+    });
+  });
 });
