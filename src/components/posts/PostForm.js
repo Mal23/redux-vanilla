@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { FaCheck } from 'react-icons/fa';
 
 export default class PostForm extends PureComponent {
   static propTypes = {
@@ -26,10 +27,10 @@ export default class PostForm extends PureComponent {
   render() {
     const { title, body } = this. state;
     return (
-      <form className={StyleSheet.PostForm} onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <input name="title" value={title} onChange={this.handleChange} />
         <textarea name="body" value={body} onChange={this.handleChange}></textarea>
-        <button>Submit</button>
+        <button>Submit <FaCheck /></button>
       </form>
     );
   }
