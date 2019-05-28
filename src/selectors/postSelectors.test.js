@@ -24,5 +24,5 @@ describe('post selectors', () => {
     };
 
     expect(getPost(state, 0)).toEqual({ id: 0, title: 'hi', body: 'what?' });
-  })
+  });
 });
